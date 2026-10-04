@@ -58,7 +58,8 @@ export default defineConfig({
             { text: '函数', link: '/guide/functions' },
             { text: '模型', link: '/guide/models' },
             { text: '错误处理', link: '/guide/errors' },
-            { text: '模块', link: '/guide/modules' }
+            { text: '模块', link: '/guide/modules' },
+            { text: '标签', link: '/guide/tags' }
           ]
         }
       ],

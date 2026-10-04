@@ -32,6 +32,9 @@ features:
   - icon: 🛠️
     title: 函数与模型
     details: 闭包、递归、一等函数；模型只定义字段，方法可随时外部扩展。
+  - icon: 🏷️
+    title: 标签系统
+    details: 标签创建真实模型实例，可由 Go 或凡语言处理器替换实现。
   - icon: 🔌
     title: 模块系统
     details: 导入 / 导出，模块只加载一次，支持按文件组织大型程序。

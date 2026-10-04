@@ -1,9 +1,11 @@
 {
   "scopeName": "source.fan",
-  "name": "凡",
+  "name": "fan",
+  "aliases": ["凡"],
   "patterns": [
     { "include": "#comments" },
     { "include": "#strings" },
+    { "include": "#tags" },
     { "include": "#numbers" },
     { "include": "#model-definition" },
     { "include": "#function-definition" },
@@ -52,6 +54,16 @@
               "match": "\\\\."
             }
           ]
+        }
+      ]
+    },
+    "tags": {
+      "patterns": [
+        {
+          "match": "[@＠]([\\p{L}_][\\p{L}\\p{N}_]*)",
+          "captures": {
+            "1": { "name": "storage.type.annotation.fan" }
+          }
         }
       ]
     },
