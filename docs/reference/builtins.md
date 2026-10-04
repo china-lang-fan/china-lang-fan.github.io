@@ -50,15 +50,53 @@ a： 1 b： 真
 
 ## 错误
 
-`错误("消息")`：创建一个错误值。消息参数会被转为文本。
+`错误("消息")` / `error("消息")`：创建一个错误值。消息参数会被转为文本。
 
 ```凡
 变量 e = 错误("出错了")
+变量 e2 = error("英文名称也可用")
 打印(e)                 # 错误：出错了
 打印(e.消息)            # 出错了
 ```
 
 错误处理的完整用法见 [错误处理](../guide/errors)。
+
+## 运行时类型
+
+`type(值)`：返回运行时类型的英文名称。
+
+```凡
+print(type(1))         # integer
+print(type("x"))       # string
+print(type([]))        # array
+```
+
+类型名称包括：`integer`、`float`、`string`、`boolean`、`nil`、`array`、`dict`、`error`、`tuple`、`module`、`function`、`class`、`instance`。
+
+## 数值截断
+
+`trunc(数字)`：将数字向零截断为整数。
+
+```凡
+print(trunc(1.9))      # 1
+print(trunc(-1.9))     # -1
+```
+
+## Unicode 字符编码
+
+`ord(单字符串)`：返回单个字符的 Unicode 编码。
+
+```凡
+print(ord("A"))        # 65
+print(ord("凡"))       # 20961
+```
+
+`char(整数)`：根据 Unicode 编码构造单字符串。
+
+```凡
+print(char(65))        # A
+print(char(20961))     # 凡
+```
 
 ## 注册标签处理
 
@@ -89,4 +127,15 @@ a： 1 b： 真
 错误("x").消息
 ```
 
-更多内建函数（数学、类型转换、输入输出等）将在标准库中逐步提供。
+## 系统基础模块
+
+基础 SDK 目录 `sdk/` 中的 `系统.凡` 使用 `@内建` 标签将底层 Go 实现包装为可导入的凡语言基础函数。
+
+```凡
+导入 "sdk/系统" 作为 系统
+
+系统.print(系统.type(1))
+```
+
+该模块导出 `print`、`error`、`type`、`trunc`、`ord`、`char`、`len` 和 `append`。
+
