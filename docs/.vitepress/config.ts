@@ -50,7 +50,9 @@ export default defineConfig({
           items: [
             { text: '数组', link: '/guide/arrays' },
             { text: '字典', link: '/guide/dicts' },
-            { text: '文件', link: '/guide/files' }
+            { text: '文件', link: '/guide/files' },
+            { text: '数学', link: '/guide/math' },
+            { text: '类型转换', link: '/guide/conversion' }
           ]
         },
         {
