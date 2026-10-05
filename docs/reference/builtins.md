@@ -137,5 +137,9 @@ print(char(20961))     # 凡
 系统.print(系统.type(1))
 ```
 
-该模块导出 `print`、`error`、`type`、`trunc`、`ord`、`char`、`len` 和 `append`。
+该模块导出 `print`、`error`、`type`、`trunc`、`ord`、`char`、`len`、`append` 和 `fail`。
+
+## 测试基础模块
+
+`sdk/测试.凡` 基于 `fail` 提供测试断言，详见 [测试指南](../guide/testing)。
 
