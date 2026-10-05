@@ -49,7 +49,8 @@ export default defineConfig({
           text: '数据结构',
           items: [
             { text: '数组', link: '/guide/arrays' },
-            { text: '字典', link: '/guide/dicts' }
+            { text: '字典', link: '/guide/dicts' },
+            { text: '文件', link: '/guide/files' }
           ]
         },
         {
