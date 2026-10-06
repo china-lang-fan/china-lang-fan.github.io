@@ -56,6 +56,7 @@ export default defineConfig({
             { text: '时间', link: '/guide/time' },
             { text: '日期', link: '/guide/date' },
             { text: '编码', link: '/guide/encoding' },
+            { text: '进程', link: '/guide/process' },
             { text: '类型转换', link: '/guide/conversion' }
           ]
         },
