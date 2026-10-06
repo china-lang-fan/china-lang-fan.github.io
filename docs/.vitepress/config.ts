@@ -53,6 +53,7 @@ export default defineConfig({
             { text: '文件', link: '/guide/files' },
             { text: '数学', link: '/guide/math' },
             { text: '随机', link: '/guide/random' },
+            { text: '时间', link: '/guide/time' },
             { text: '类型转换', link: '/guide/conversion' }
           ]
         },
