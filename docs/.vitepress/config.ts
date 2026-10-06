@@ -58,6 +58,7 @@ export default defineConfig({
             { text: '编码', link: '/guide/encoding' },
             { text: '进程', link: '/guide/process' },
             { text: '网络', link: '/guide/network' },
+            { text: '正则', link: '/guide/regex' },
             { text: '类型转换', link: '/guide/conversion' }
           ]
         },
