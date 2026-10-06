@@ -54,6 +54,7 @@ export default defineConfig({
             { text: '数学', link: '/guide/math' },
             { text: '随机', link: '/guide/random' },
             { text: '时间', link: '/guide/time' },
+            { text: '日期', link: '/guide/date' },
             { text: '类型转换', link: '/guide/conversion' }
           ]
         },
