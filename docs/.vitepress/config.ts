@@ -32,6 +32,7 @@ export default defineConfig({
           items: [
             { text: '介绍', link: '/guide/introduction' },
             { text: '安装与使用', link: '/guide/getting-started' },
+            { text: '编辑器与语言服务器', link: '/guide/editor' },
             { text: '语法风格', link: '/guide/style' }
           ]
         },
