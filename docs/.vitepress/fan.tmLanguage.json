@@ -54,6 +54,27 @@
               "match": "\\\\."
             }
           ]
+        },
+        {
+          "name": "string.quoted.single.fan",
+          "begin": "'|‘",
+          "end": "'|’|(?=\\n)",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.character.begin.fan" }
+          },
+          "endCaptures": {
+            "0": { "name": "punctuation.definition.character.end.fan" }
+          },
+          "patterns": [
+            {
+              "name": "constant.character.escape.fan",
+              "match": "\\\\(?:['\"\\\\nrt])"
+            },
+            {
+              "name": "invalid.illegal.unknown-escape.fan",
+              "match": "\\\\."
+            }
+          ]
         }
       ]
     },
@@ -127,7 +148,7 @@
       "patterns": [
         {
           "name": "storage.type.fan",
-          "match": "(?<![\\p{L}\\p{N}_])(整数|小数|字符串|布尔|数组|字典|错误)(?![\\p{L}\\p{N}_])"
+          "match": "(?<![\\p{L}\\p{N}_])(整数|小数|字符串|字符|字节|布尔|数组|字典|错误)(?![\\p{L}\\p{N}_])"
         }
       ]
     },
