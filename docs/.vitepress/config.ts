@@ -69,6 +69,7 @@ export default defineConfig({
             { text: '函数', link: '/guide/functions' },
             { text: '原生类型方法', link: '/guide/primitive-methods' },
             { text: '模型', link: '/guide/models' },
+            { text: '接口', link: '/guide/interfaces' },
             { text: '错误处理', link: '/guide/errors' },
             { text: '模块', link: '/guide/modules' },
             { text: '标签', link: '/guide/tags' },
