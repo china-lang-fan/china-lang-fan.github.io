@@ -112,7 +112,7 @@
       "patterns": [
         {
           "name": "keyword.declaration.fan",
-          "match": "(?<![\\p{L}\\p{N}_])(定义|变量|常量|函数|嵌入)(?![\\p{L}\\p{N}_])"
+          "match": "(?<![\\p{L}\\p{N}_])(定义|变量|常量|函数|嵌入|类型)(?![\\p{L}\\p{N}_])"
         },
         {
           "name": "keyword.declaration.method.fan",
@@ -124,7 +124,7 @@
         },
         {
           "name": "keyword.other.model.fan",
-          "match": "(?<![\\p{L}\\p{N}_])(模型|类|接口)(?![\\p{L}\\p{N}_])"
+          "match": "(?<![\\p{L}\\p{N}_])(模型|类|接口|类型)(?![\\p{L}\\p{N}_])"
         },
         {
           "name": "keyword.other.member.fan",
@@ -188,7 +188,7 @@
     "model-definition": {
       "patterns": [
         {
-          "match": "(?<![\\p{L}\\p{N}_])定义\\s+(模型|类|接口)\\s+([\\p{L}_][\\p{L}\\p{N}_]*)",
+          "match": "(?<![\\p{L}\\p{N}_])定义\\s+(模型|类|接口|类型)\\s+([\\p{L}_][\\p{L}\\p{N}_]*)",
           "captures": {
             "1": { "name": "keyword.other.model.fan" },
             "2": { "name": "entity.name.type.fan" }
