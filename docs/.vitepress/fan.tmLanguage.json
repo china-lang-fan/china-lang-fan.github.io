@@ -47,11 +47,37 @@
           "patterns": [
             {
               "name": "constant.character.escape.fan",
-              "match": "\\\\(?:[\"\\\\nrt]|u\\h{4})"
+              "match": "\\\\(?:[\"\\\\nrt$]|u\\h{4})"
             },
             {
               "name": "invalid.illegal.unknown-escape.fan",
               "match": "\\\\."
+            },
+            {
+              "name": "meta.interpolation.fan",
+              "match": "(\\$)([\\p{L}_][\\p{L}\\p{N}_]*)",
+              "captures": {
+                "1": { "name": "punctuation.definition.template-expression.begin.fan" },
+                "2": { "name": "variable.other.readwrite.fan" }
+              }
+            },
+            {
+              "name": "meta.interpolation.fan",
+              "begin": "\\$\\{",
+              "end": "\\}",
+              "beginCaptures": {
+                "0": { "name": "punctuation.definition.template-expression.begin.fan" }
+              },
+              "endCaptures": {
+                "0": { "name": "punctuation.definition.template-expression.end.fan" }
+              },
+              "patterns": [
+                { "include": "#strings" },
+                { "include": "#numbers" },
+                { "include": "#constants" },
+                { "include": "#keywords-operator" },
+                { "match": "[\\p{L}_][\\p{L}\\p{N}_]*", "name": "variable.other.readwrite.fan" }
+              ]
             }
           ]
         },
