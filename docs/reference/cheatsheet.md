@@ -254,4 +254,4 @@ d 等于 {"a": 1}
 结束
 ```
 
-另见 [关键字](./keywords) 和 [内建函数](./builtins)。
+另见 [关键字](./keywords) 和 [内建函数](../sdk/builtins)。

@@ -22,6 +22,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '指南', link: '/guide/introduction', activeMatch: '/guide/' },
+      { text: '标准库', link: '/sdk/', activeMatch: '/sdk/' },
       { text: '示例', link: '/examples/hello-world', activeMatch: '/examples/' },
       { text: '参考', link: '/reference/cheatsheet', activeMatch: '/reference/' }
     ],
@@ -50,17 +51,7 @@ export default defineConfig({
           text: '数据结构',
           items: [
             { text: '数组', link: '/guide/arrays' },
-            { text: '字典', link: '/guide/dicts' },
-            { text: '文件', link: '/guide/files' },
-            { text: '数学', link: '/guide/math' },
-            { text: '随机', link: '/guide/random' },
-            { text: '时间', link: '/guide/time' },
-            { text: '日期', link: '/guide/date' },
-            { text: '编码', link: '/guide/encoding' },
-            { text: '进程', link: '/guide/process' },
-            { text: '网络', link: '/guide/network' },
-            { text: '正则', link: '/guide/regex' },
-            { text: '类型转换', link: '/guide/conversion' }
+            { text: '字典', link: '/guide/dicts' }
           ]
         },
         {
@@ -72,8 +63,52 @@ export default defineConfig({
             { text: '接口', link: '/guide/interfaces' },
             { text: '错误处理', link: '/guide/errors' },
             { text: '模块', link: '/guide/modules' },
-            { text: '标签', link: '/guide/tags' },
-            { text: '测试', link: '/guide/testing' }
+            { text: '标签', link: '/guide/tags' }
+          ]
+        }
+      ],
+      '/sdk/': [
+        {
+          text: '标准库',
+          items: [
+            { text: '总览', link: '/sdk/' },
+            { text: '内建函数', link: '/sdk/builtins' }
+          ]
+        },
+        {
+          text: '基础',
+          items: [
+            { text: '数学', link: '/sdk/math' },
+            { text: '随机', link: '/sdk/random' },
+            { text: '类型转换', link: '/sdk/conversion' }
+          ]
+        },
+        {
+          text: '文本',
+          items: [
+            { text: '正则', link: '/sdk/regex' },
+            { text: '编码', link: '/sdk/encoding' }
+          ]
+        },
+        {
+          text: '时间',
+          items: [
+            { text: '时间', link: '/sdk/time' },
+            { text: '日期', link: '/sdk/date' }
+          ]
+        },
+        {
+          text: '系统交互',
+          items: [
+            { text: '文件', link: '/sdk/files' },
+            { text: '进程', link: '/sdk/process' },
+            { text: '网络', link: '/sdk/network' }
+          ]
+        },
+        {
+          text: '测试',
+          items: [
+            { text: '测试框架', link: '/sdk/testing' }
           ]
         }
       ],
@@ -96,7 +131,7 @@ export default defineConfig({
           items: [
             { text: '语法速查', link: '/reference/cheatsheet' },
             { text: '关键字', link: '/reference/keywords' },
-            { text: '内建函数', link: '/reference/builtins' }
+            { text: '内建函数', link: '/sdk/builtins' }
           ]
         }
       ]
