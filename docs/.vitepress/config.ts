@@ -24,7 +24,8 @@ export default defineConfig({
       { text: '指南', link: '/guide/introduction', activeMatch: '/guide/' },
       { text: '标准库', link: '/sdk/', activeMatch: '/sdk/' },
       { text: '示例', link: '/examples/hello-world', activeMatch: '/examples/' },
-      { text: '参考', link: '/reference/cheatsheet', activeMatch: '/reference/' }
+      { text: '参考', link: '/reference/cheatsheet', activeMatch: '/reference/' },
+      { text: '迭代计划', link: '/roadmap/', activeMatch: '/roadmap/' }
     ],
     sidebar: {
       '/guide/': [
@@ -122,6 +123,14 @@ export default defineConfig({
             { text: '函数与多返回值', link: '/examples/functions' },
             { text: '模型与错误', link: '/examples/models' },
             { text: '模块', link: '/examples/modules' }
+          ]
+        }
+      ],
+      '/roadmap/': [
+        {
+          text: '迭代计划',
+          items: [
+            { text: '仓库分工关系', link: '/roadmap/' }
           ]
         }
       ],
