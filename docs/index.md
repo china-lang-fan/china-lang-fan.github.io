@@ -14,7 +14,7 @@ hero:
       link: /reference/cheatsheet
     - theme: alt
       text: GitHub
-      link: https://github.com/china-lang-fan/fan
+      link: https://github.com/china-lang-fan/fan-go
 
 features:
   - icon: 🀄

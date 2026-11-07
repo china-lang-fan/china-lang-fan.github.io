@@ -1,6 +1,6 @@
 # 凡语言官方文档
 
-[凡语言](https://github.com/china-lang-fan/fan)是一门以中文关键字为核心的通用脚本语言。本仓库是凡语言官方文档，使用 [VitePress](https://vitepress.dev/) 构建并部署在 GitHub Pages。
+[凡语言](https://github.com/china-lang-fan/fan-go)是一门以中文关键字为核心的通用脚本语言。本仓库是凡语言官方文档，使用 [VitePress](https://vitepress.dev/) 构建并部署在 GitHub Pages。
 
 在线阅读：<https://china-lang-fan.github.io/>
 

@@ -7,7 +7,7 @@
 需要先安装 [Go](https://go.dev/dl/)（建议 1.26 或更高版本）。
 
 ```bash
-git clone git@github.com:china-lang-fan/fan.git
+git clone git@github.com:china-lang-fan/fan-go.git
 cd fan
 go build ./cmd/fan
 ```
