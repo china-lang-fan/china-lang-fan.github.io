@@ -1,18 +1,44 @@
 # 安装与使用
 
-凡语言解释器使用 Go 实现。
+凡语言的参考实现（语义基准）是 [fan-rust](https://github.com/china-lang-fan/fan-rust)，使用 Rust 编写，命令为 `fan-cli`。
 
-## 从源码构建
+## 安装
 
-需要先安装 [Go](https://go.dev/dl/)（建议 1.26 或更高版本）。
+### 下载安装包（推荐）
 
-```bash
-git clone git@github.com:china-lang-fan/fan-go.git
-cd fan
-go build ./cmd/fan
+从 [Releases](https://github.com/china-lang-fan/fan-rust/releases) 下载对应平台的安装包：
+
+| 平台 | 产物 |
+| --- | --- |
+| Linux x86_64 | `fan-<版本>-x86_64-unknown-linux-gnu.tar.gz` |
+| macOS Apple Silicon | `fan-<版本>-aarch64-apple-darwin.tar.gz` |
+| macOS Intel | `fan-<版本>-x86_64-apple-darwin.tar.gz` |
+| Windows x86_64 | `fan-<版本>-x86_64-pc-windows-msvc.zip` |
+
+每个安装包都包含「可执行文件 + 标准库」，解压即用：
+
+```
+fan-0.2.0-x86_64-unknown-linux-gnu/
+├── fan-cli        # 可执行文件（Windows 下为 fan-cli.exe）
+└── sdk/           # 标准库，导入时自动查找
 ```
 
-将生成的可执行文件放到系统 `PATH` 中，即可使用。
+把 `fan-cli` 放到系统 `PATH` 中即可使用。
+
+macOS 的二进制未签名，首次运行若被 Gatekeeper 拦下，执行
+`xattr -d com.apple.quarantine fan-cli` 即可。
+
+### 从源码构建
+
+需要先安装 [Rust](https://www.rust-lang.org/tools/install)。
+
+```bash
+git clone git@github.com:china-lang-fan/fan-rust.git
+cd fan-rust
+cargo build --release
+```
+
+编译产物在 `target/release/fan-cli`。从源码构建时解释器不带标准库，需设置环境变量 `FAN_SDK` 指向 [fan-sdk](https://github.com/china-lang-fan/fan-sdk) 目录，或把 `fan-sdk` 放在本仓库的同级目录。
 
 ## 运行脚本
 
@@ -25,7 +51,7 @@ go build ./cmd/fan
 运行：
 
 ```bash
-fan run hello.凡
+fan-cli 运行 hello.凡
 ```
 
 输出：
@@ -37,16 +63,17 @@ fan run hello.凡
 ## 交互式模式（REPL）
 
 ```bash
-fan repl
+fan-cli 交互
 ```
 
-进入后可以逐行输入表达式：
+进入后可以逐行输入，表达式的值会直接回显：
 
 ```text
-fan> 1 加 2
+凡语言 REPL，输入 :退出 结束
+1 加 2
 3
-fan> 变量 名字 = "小明"
-fan> 打印 名字
+变量 名字 = "小明"
+打印 名字
 小明
 ```
 
@@ -55,8 +82,9 @@ fan> 打印 名字
 ## 其他命令
 
 ```bash
-fan version
-fan help
+fan-cli 测试 目录或文件   # 执行 *_测试.凡 中的测试函数
+fan-cli 版本              # 输出版本
+fan-cli 帮助              # 输出用法
 ```
 
 ## 编辑器支持

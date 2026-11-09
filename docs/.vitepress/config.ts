@@ -34,15 +34,15 @@ export default defineConfig({
           items: [
             { text: '介绍', link: '/guide/introduction' },
             { text: '安装与使用', link: '/guide/getting-started' },
-            { text: '编辑器与语言服务器', link: '/guide/editor' },
-            { text: '语法风格', link: '/guide/style' }
+            { text: '编辑器与语言服务器', link: '/guide/editor' }
           ]
         },
         {
-          text: '基础',
+          text: '语言基础',
           items: [
+            { text: '语法风格', link: '/guide/style' },
             { text: '变量与常量', link: '/guide/variables' },
-            { text: '类型系统', link: '/guide/types' },
+            { text: '基本类型', link: '/guide/basic-types' },
             { text: '运算', link: '/guide/operators' },
             { text: '条件', link: '/guide/conditionals' },
             { text: '循环', link: '/guide/loops' }
@@ -56,12 +56,18 @@ export default defineConfig({
           ]
         },
         {
-          text: '抽象',
+          text: '类型与抽象',
           items: [
+            { text: '类型系统', link: '/guide/types' },
             { text: '函数', link: '/guide/functions' },
             { text: '原生类型方法', link: '/guide/primitive-methods' },
             { text: '模型', link: '/guide/models' },
-            { text: '接口', link: '/guide/interfaces' },
+            { text: '接口', link: '/guide/interfaces' }
+          ]
+        },
+        {
+          text: '错误与工程',
+          items: [
             { text: '错误处理', link: '/guide/errors' },
             { text: '模块', link: '/guide/modules' },
             { text: '标签', link: '/guide/tags' }
