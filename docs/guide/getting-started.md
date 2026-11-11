@@ -1,6 +1,6 @@
 # 安装与使用
 
-凡语言的参考实现（语义基准）是 [fan-rust](https://github.com/china-lang-fan/fan-rust)，使用 Rust 编写，命令为 `fan-cli`。
+凡语言的参考实现（语义基准）是 [fan-rust](https://github.com/china-lang-fan/fan-rust)，使用 Rust 编写，命令为 `fan`。
 
 ## 安装
 
@@ -19,14 +19,16 @@
 
 ```
 fan-0.2.0-x86_64-unknown-linux-gnu/
-├── fan-cli        # 可执行文件（Windows 下为 fan-cli.exe）
-└── sdk/           # 标准库，导入时自动查找
+├── fan            # 可执行文件（Windows 下为 fan.exe）
+└── sdk/           # 标准库，内含 库/ 与 测试/ 两个子目录
+    ├── 库/        # 库模块（导入时写 库/模块名）
+    └── 测试/      # 标准库自带测试
 ```
 
-把 `fan-cli` 放到系统 `PATH` 中即可使用。
+把 `fan` 放到系统 `PATH` 中即可使用。
 
 macOS 的二进制未签名，首次运行若被 Gatekeeper 拦下，执行
-`xattr -d com.apple.quarantine fan-cli` 即可。
+`xattr -d com.apple.quarantine fan` 即可。
 
 ### 从源码构建
 
@@ -38,7 +40,7 @@ cd fan-rust
 cargo build --release
 ```
 
-编译产物在 `target/release/fan-cli`。从源码构建时解释器不带标准库，需设置环境变量 `FAN_SDK` 指向 [fan-sdk](https://github.com/china-lang-fan/fan-sdk) 目录，或把 `fan-sdk` 放在本仓库的同级目录。
+编译产物在 `target/release/fan`。从源码构建时解释器不带标准库，需设置环境变量 `FAN_SDK` 指向 [fan-sdk](https://github.com/china-lang-fan/fan-sdk) 目录，或把 `fan-sdk` 放在本仓库的同级目录。
 
 ## 运行脚本
 
@@ -51,7 +53,7 @@ cargo build --release
 运行：
 
 ```bash
-fan-cli 运行 hello.凡
+fan 运行 hello.凡
 ```
 
 输出：
@@ -79,7 +81,7 @@ fan-cli 运行 hello.凡
 ## 交互式模式（REPL）
 
 ```bash
-fan-cli 交互
+fan 交互
 ```
 
 进入后可以逐行输入，表达式的值会直接回显：
@@ -98,9 +100,9 @@ fan-cli 交互
 ## 其他命令
 
 ```bash
-fan-cli 测试 目录或文件   # 执行 *_测试.凡 中的测试函数
-fan-cli 版本              # 输出版本
-fan-cli 帮助              # 输出用法
+fan 测试 目录或文件   # 执行 *_测试.凡 中的测试函数
+fan 版本              # 输出版本
+fan 帮助              # 输出用法
 ```
 
 ## 编辑器支持

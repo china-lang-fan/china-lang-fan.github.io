@@ -9,7 +9,7 @@
 运行：
 
 ```bash
-fan-cli 运行 hello.凡
+fan 运行 hello.凡
 ```
 
 输出：
