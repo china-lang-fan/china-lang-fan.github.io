@@ -1,12 +1,14 @@
 # 编辑器与语言服务器
 
-凡语言内置了一个语言服务器（Language Server），编辑器通过它获得实时诊断、悬停、跳转和补全能力。命令为：
+Rust 版解释器内置了一个语言服务器（Language Server），编辑器通过它获得实时诊断、悬停、跳转和补全能力。命令为：
 
 ```sh
 fan lsp
 ```
 
 语言服务器通过标准输入输出（stdio）使用 [LSP](https://microsoft.github.io/language-server-protocol/) 协议与编辑器通信。
+
+> 说明：语言服务器目前仅由 Rust 版（`fan-lsp`）提供；Go 版未内置 LSP。
 
 ## VS Code
 

@@ -97,14 +97,17 @@ export default defineConfig({
           items: [
             { text: '数学', link: '/sdk/math' },
             { text: '随机', link: '/sdk/random' },
+            { text: '系统', link: '/sdk/system' },
             { text: '类型转换', link: '/sdk/conversion' }
           ]
         },
         {
           text: '文本',
           items: [
+            { text: '字符串', link: '/sdk/strings' },
             { text: '正则', link: '/sdk/regex' },
-            { text: '编码', link: '/sdk/encoding' }
+            { text: '编码', link: '/sdk/encoding' },
+            { text: '模块工具', link: '/sdk/module-tools' }
           ]
         },
         {
